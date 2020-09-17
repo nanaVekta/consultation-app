@@ -1,0 +1,94 @@
+<ion-content class="ion-padding">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Profile
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <img src="../../assets/user.jpg">
+  <h2>Kofi Ghana</h2>
+
+  <ion-list class="subs" lines="none">
+    <ion-item button>
+      <p>
+        <ion-icon name="layers"></ion-icon>
+        &nbsp;
+        Current Subscription
+      </p>
+
+      <p class="subs-type" slot="end">
+        Basic
+      </p>
+      
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="list">
+    <ion-item-sliding>
+      <ion-item>
+        <p>Full name</p>
+        <p class="value" slot="end">Kofi Ghana</p>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="success" (click)="presentModal('Full name', 'Kofi Ghana')">
+          <ion-icon name="create"></ion-icon> &nbsp; Edit
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    
+
+    <ion-item-sliding>
+      <ion-item>
+        <p>Username</p>
+        <p class="value" slot="end">KofiGH</p>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="success">
+          <ion-icon name="create"></ion-icon> &nbsp; Edit
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item>
+        <p>Email</p>
+        <p class="value" slot="end">kofi@gh.com</p>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="success">
+          <ion-icon name="create"></ion-icon> &nbsp; Edit
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item>
+        <p>Phone</p>
+        <p class="value" slot="end">+233501534343</p>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="success">
+          <ion-icon name="create"></ion-icon> &nbsp; Edit
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block" color="danger">Log Out</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" color="tertiary">Change Password</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

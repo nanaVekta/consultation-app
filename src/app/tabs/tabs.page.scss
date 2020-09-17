@@ -1,0 +1,22 @@
+
+
+ion-tab-bar{
+    --color: #022534;
+    border: none;
+    margin-top: -10px;
+}
+
+.tab-selected{
+    background: #e4f5ff;
+    color: #022534;
+    border: none !important;
+    //border-radius: 255px 0 255px 0;
+
+    ion-icon{
+        background: #022534;
+        color: #fff;
+        padding: 4px;
+        border-radius: 255px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+}

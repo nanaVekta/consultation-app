@@ -1,0 +1,27 @@
+ion-content{
+
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+ion-card{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+ion-title{
+    color: #022534 !important;
+}
+
+.registerBtn{
+    --background: #022534;
+    --color: #fff;
+    --box-shadow: none;
+    --padding-top: 25px;
+    --padding-bottom: 25px;
+    width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-transform: none;
+}

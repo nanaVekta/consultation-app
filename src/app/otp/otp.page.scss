@@ -1,0 +1,53 @@
+ion-content{
+    --background: url('../../assets/login.jpg');
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+
+}
+
+.body{
+    background-color: #fff;
+    padding: 50px 30px;
+    margin-top: 200px;
+    height: 100%;
+    border-radius: 80px 0 0 0;
+}
+
+.error-message{
+    color: red;
+    text-align: center;
+}
+
+.registerBtn{
+    --background: #022534;
+    --color: #fff;
+    --box-shadow: none;
+    --padding-top: 25px;
+    --padding-bottom: 25px;
+    width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-transform: none;
+}
+
+ion-label{
+    --color: #022534;
+    color: #022534;
+}
+
+a{
+    color: #022534;
+}
+
+ion-input{
+    //background: #d7dde5;
+    --padding-start: 5px;
+}
+
+ion-item{
+    --background: #d7dde5;
+    --margin-start: 0;
+    --margin-end: 0;
+    // --padding-start: 0;
+    // --padding-end: 0;
+}

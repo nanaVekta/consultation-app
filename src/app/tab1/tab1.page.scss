@@ -1,0 +1,86 @@
+ion-content{
+
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+ion-card{
+    border-radius: 20px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+#profile-card{
+    //background: rgba($color: #022534, $alpha: 0.2);
+}
+
+#avatar{
+    //width: 20%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+h1{
+    color: #022534;
+    text-align: center;
+    margin-top: 20px;
+    text-emphasis: none;
+    font-weight: bolder;
+}
+
+ion-note{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ion-list{
+    background: none;
+}
+
+.premium{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+ion-label{
+    margin-left: 15px;
+}
+
+#premium-icon-done{
+    background: rgba($color: #022534, $alpha: 0.2);
+    padding: 10px 10px 3px 10px;
+    border-radius: 255px;
+}
+
+#app-icon-done{
+    background: rgba($color: #2e8b57, $alpha: 0.2);
+    padding: 10px 10px 3px 10px;
+    border-radius: 255px;
+    color: #2e8b57
+}
+
+#app-icon-pending{
+    background: rgba($color: #ced117, $alpha: 0.2);
+    padding: 10px 10px 3px 10px;
+    border-radius: 255px;
+    color: #ced117
+}
+
+#app-icon-cancelled{
+    background: rgba($color: #ea3c53, $alpha: 0.2);
+    padding: 10px 10px 3px 10px;
+    border-radius: 255px;
+    color: #ea3c53
+}
+
+a{
+    color: #022534
+}
+
+ion-fab-button{
+    --background: #022534
+}

@@ -1,0 +1,144 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+    <ion-card id="profile-card">
+      <ion-card-content>
+        <ion-avatar id="avatar">
+          <img src="../../assets/user.jpg">
+        </ion-avatar>
+
+        <h1>Kofi Ghana</h1>
+        <ion-note style="text-align: center"><ion-icon color="success" name="bookmark"></ion-icon> Premium User</ion-note>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-list lines="none">
+      <ion-item>
+        <ion-text>Premium History</ion-text>
+        <h1 slot="end" (click)="presentPopover()">
+          <ion-icon name="options-outline"></ion-icon>
+        </h1>
+      </ion-item>
+    </ion-list>
+
+    <div *ngIf="!itemSet">
+      <ion-list lines="none" style="margin-top: -10px;">
+        <ion-item class="premium">
+          <ion-avatar>
+            <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+          </ion-avatar>
+          <ion-label>
+            <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 20%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text>
+          </ion-label>
+        </ion-item>
+        <ion-item class="premium">
+          <ion-avatar>
+            <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+          </ion-avatar>
+          <ion-label>
+            <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 20%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text>
+          </ion-label>
+        </ion-item>
+        <ion-item class="premium">
+          <ion-avatar>
+            <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+          </ion-avatar>
+          <ion-label>
+            <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 20%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div *ngIf="itemSet">
+      <ion-list lines="none" style="margin-top: -10px;">
+        <ion-item class="premium" *ngFor="let item of premium">
+          <h1 id="premium-icon-done"><ion-icon name="bookmark"></ion-icon></h1>
+          <ion-label>
+            <h3>{{item.name}}</h3>
+            <h2 style="color: #022534;">GH&cent; {{item.amount}}</h2>
+            <ion-note>{{item.time}}</ion-note>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <a href="#" slot="end">View All</a>
+        </ion-item>
+        
+      </ion-list>
+    </div>
+
+    <ion-list lines="none">
+      <ion-item>
+        <ion-text>Appointment History</ion-text>
+        <!-- <h1 slot="end">
+          <ion-icon name="options-outline"></ion-icon>
+        </h1> -->
+      </ion-item>
+    </ion-list>
+
+    <div *ngIf="!appSet">
+      <ion-list lines="none" style="margin-top: -10px;">
+        <ion-item class="premium">
+          <ion-avatar>
+            <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+          </ion-avatar>
+          <ion-label>
+            <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 20%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text>
+          </ion-label>
+        </ion-item>
+        <ion-item class="premium">
+          <ion-avatar>
+            <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+          </ion-avatar>
+          <ion-label>
+            <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 20%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text>
+          </ion-label>
+        </ion-item>
+        <ion-item class="premium">
+          <ion-avatar>
+            <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+          </ion-avatar>
+          <ion-label>
+            <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 20%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div *ngIf="appSet">
+      <ion-list lines="none" style="margin-top: -10px;">
+        <ion-item class="premium" *ngFor="let item of appointment">
+          <h1 id="app-icon-done" *ngIf="item.status == 'Completed'"><ion-icon name="checkmark-outline"></ion-icon></h1>
+          <h1 id="app-icon-pending" *ngIf="item.status == 'Pending'"><ion-icon name="sync-outline"></ion-icon></h1>
+          <h1 id="app-icon-cancelled" *ngIf="item.status == 'Rescheduled'"><ion-icon name="warning-outline"></ion-icon></h1>
+          <ion-label>
+            <h3>{{item.name}}</h3>
+            <h2 style="color: #022534;">{{item.status}}</h2>
+            <ion-note>{{item.time}}</ion-note>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <a href="#" slot="end">View All</a>
+        </ion-item>
+        
+      </ion-list>
+    </div>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="presentModal()">
+        <ion-icon name="calendar"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>
