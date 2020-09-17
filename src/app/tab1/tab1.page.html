@@ -124,7 +124,9 @@
           <h1 id="app-icon-cancelled" *ngIf="item.status == 'Rescheduled'"><ion-icon name="warning-outline"></ion-icon></h1>
           <ion-label>
             <h3>{{item.name}}</h3>
-            <h2 style="color: #022534;">{{item.status}}</h2>
+            <h2 *ngIf="item.status == 'Completed'" style="color: #2e8b57;">{{item.status}}</h2>
+            <h2 *ngIf="item.status == 'Pending'" style="color: #ced117;">{{item.status}}</h2>
+            <h2 *ngIf="item.status == 'Rescheduled'" style="color: #ea3c53;">{{item.status}}</h2>
             <ion-note>{{item.time}}</ion-note>
           </ion-label>
         </ion-item>
